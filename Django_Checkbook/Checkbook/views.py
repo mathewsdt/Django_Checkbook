@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .forms import AccountForm, TransactionForm
-
+from .models import Account, Transaction
 def home(request):
     form = TransactionForm(data=request.POST or None)
     if request.method == 'POST':
