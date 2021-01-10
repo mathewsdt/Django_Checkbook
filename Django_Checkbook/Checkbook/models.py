@@ -15,11 +15,11 @@ class Account(models.Model):
 TransactionTypes = [('Deposit', 'Deposit'), ('withdrawel', 'withdrawl')]
 
 class Transaction(models.Model):
-    data = models.DateField()
+    date = models.DateField()
     type = models.CharField(max_length=10, choices=TransactionTypes)
     amount = models.DecimalField(max_digits=15, decimal_places=2)
     description = models.CharField(max_length=100)
     account = models.ForeignKey(Account, on_delete=models.CASCADE)
 
-    Transaction = models.Manager()
+    Transactions = models.Manager()
 

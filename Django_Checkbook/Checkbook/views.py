@@ -44,11 +44,5 @@ def transaction(request):
     content = {'form': form}
     return render(request, 'checkbook/AddTransaction.html', content)
 
-def balance(request, pk):
-    account = get_object_or_404(Account, pk=pk)
-    content = {'account': account}
-    return render(request, 'checkbook/BalanceSheet.html', content)
-
-
 
 
